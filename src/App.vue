@@ -1,15 +1,15 @@
-<script lang="ts" setup>
+<script setup>
 import { ref } from 'vue'
-import SearchInput from '@/components/SearchInput.vue'
 import Loading from 'vue-loading-overlay'
 import 'vue-loading-overlay/dist/css/index.css'
 import Swal from 'sweetalert2'
 import { toast } from '@/utils/toast.js'
+import SearchInput from '@/components/SearchInput.vue'
 
-const client_number = ref<string>('')
-const show_client = ref<boolean>(false)
-const loading = ref<boolean>(false)
-const show_alert = ref<boolean>(false)
+const client_number = ref('')
+const show_client = ref(false)
+const loading = ref(false)
+const show_alert = ref(false)
 
 const client = {
   name: 'Josiel Alonso De Picado'
