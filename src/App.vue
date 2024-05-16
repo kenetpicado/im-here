@@ -3,7 +3,7 @@ import { ref } from 'vue'
 import Loading from 'vue-loading-overlay'
 import 'vue-loading-overlay/dist/css/index.css'
 import Swal from 'sweetalert2'
-import { toast } from '@/utils/toast.js'
+import toast from '@/utils/toast.js'
 import SearchInput from '@/components/SearchInput.vue'
 
 const client_number = ref('')
@@ -79,11 +79,10 @@ function showAlert() {
       <span class="font-bold capitalize text-slate-600">
         {{ client.name }}
       </span>
-      <span class="text-slate-600 max-w-xl"> Pesas (30 dias) </span>
-      <span class="text-slate-600 max-w-xl"> del 16 de Abril al 15 de Mayo </span>
-      <span class="text-slate-600 bg-green-100 text-green-600 rounded-full px-6 py-2">
-        Activo
-      </span>
+      <span class="text-slate-600 max-w-xl">Pesas (30 dias)</span>
+      <span class="text-slate-600 max-w-xl">del 16 de Abril al 15 de Mayo</span>
+      <span class="text-danger text-xs"> Expira en 7 dias </span>
+      <span class="bg-green-100 text-green-600 rounded-2xl px-6 py-2 mt-3"> Activo </span>
       <button
         class="mt-4 bg-danger text-white w-full rounded-2xl text-center py-4 font-bold text-lg max-w-xl"
         type="button"
