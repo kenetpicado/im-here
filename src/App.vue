@@ -12,7 +12,7 @@ const loading = ref(false)
 const show_alert = ref(false)
 
 const client = {
-  name: 'Josiel Alonso De Picado'
+  name: 'Josiel Alonso'
 }
 
 function onSubmit() {
@@ -83,11 +83,8 @@ function showAlert() {
       <span class="text-slate-600 max-w-xl">del 16 de Abril al 15 de Mayo</span>
       <span class="text-danger text-xs"> Expira en 7 dias </span>
       <span class="bg-green-100 text-green-600 rounded-2xl px-6 py-2 mt-3"> Activo </span>
-      <button
-        class="mt-4 bg-danger text-white w-full rounded-2xl text-center py-4 font-bold text-lg max-w-xl"
-        type="button"
-        @click.stop="markAttendance"
-      >
+      <button class="mt-4 bg-danger text-white w-full rounded-2xl text-center py-4 font-bold text-lg max-w-xl"
+        type="button" @click.stop="markAttendance">
         Marcar asistencia
       </button>
     </div>
@@ -95,10 +92,7 @@ function showAlert() {
   <section v-else class="bg-white text-gray-800 h-full mb-4">
     <div class="w-full flex items-center justify-center flex-col mb-4 gap-2 px-5">
       <Transition mode="out-in" name="slide-up">
-        <span
-          v-if="show_alert"
-          class="text-danger bg-red-100 w-full text-center py-2 rounded-2xl max-w-xl"
-        >
+        <span v-if="show_alert" class="text-danger bg-red-100 w-full text-center py-2 rounded-2xl max-w-xl">
           Que tengas un excelente entreno! 💪
         </span>
         <div v-else class="flex flex-col w-full items-center gap-2">
